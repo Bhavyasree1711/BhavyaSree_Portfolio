@@ -32,7 +32,7 @@ const Contact = () => {
           <h3>LinkedIn</h3>
           <p>
             <a
-              href="https://linkedin.com/s-bhavyasree1711"
+              href="https://www.linkedin.com/in/s-bhavyasree1711/"
               target="_blank"
               rel="noreferrer"
             >

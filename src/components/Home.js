@@ -19,7 +19,7 @@ const Home = () => {
 
 
         <h1 className="hero-title-main">
-          Hey, I&apos;m <span>Bhavya Sree</span>
+          Hey, I&apos;m <span>S.Bhavya Sree</span>
         </h1>
 
         <p className="hero-subtitle-main">
@@ -75,6 +75,7 @@ const Home = () => {
           </div>
           {/* <div className="hero-status-pill">Available for work</div> */}
         </div>
+        
       </div>
     </section>
   );

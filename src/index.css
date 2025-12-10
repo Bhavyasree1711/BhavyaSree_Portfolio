@@ -1072,35 +1072,36 @@ body {
   }
 }
 
-/* ================= HERO MOBILE FIX ================= */
+/* === CLEAN HERO MOBILE LAYOUT (ONLY BLOCK) === */
 @media (max-width: 640px) {
+  /* Home section should not force full height */
+  #home.page-section {
+    min-height: auto;
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Hero becomes a vertical flex layout */
   .hero {
-    flex-direction: column-reverse; /* image on top, text below */
-    align-items: center;
-    gap: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
+  /* Make sure text block comes first */
   .hero-left {
-    text-align: center;
+    width: 100%;
+    order: 1;
   }
 
-  .hero-title-main {
-    font-size: 2rem;
-    line-height: 1.25;
-  }
-
-  .hero-subtitle-main {
-    font-size: 0.95rem;
-    max-width: 100%;
-  }
-
-  .hero-buttons {
+  /* Profile image comes LAST on mobile */
+  .hero-right {
+    width: 100%;
+    order: 2;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-stats {
-    justify-content: center;
+    margin-top: 0.5rem;
   }
 
   .hero-profile-circle {
@@ -1108,89 +1109,31 @@ body {
     height: 200px;
   }
 
-  /* IMPORTANT: remove full screen height only for home */
-  #home.page-section {
-    min-height: auto;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-  }
-}
-/* ============= HERO / HOME MOBILE FIX ============= */
-
-/* base (desktop/tablet) can stay as you already have */
-
-.hero-section {
-  /* just in case, keep it relative to navbar height */
-  padding-top: 6rem;
-}
-
-/* If you have a grid/flex wrapper around text + image,
-   I'm assuming it's named .hero-grid. */
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 3rem;
-}
-
-/* --------- MOBILE OPTIMIZATION --------- */
-@media (max-width: 768px) {
-  .hero-section {
-    padding-top: 5rem;          /* less empty space at top */
-    padding-bottom: 3rem;
+  /* Name/title – no weird vertical breaking */
+  .hero-title-main {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    white-space: normal;
   }
 
-  .hero-grid {
-    display: flex;
-    flex-direction: column-reverse; /* image below text */
-    align-items: center;
-    gap: 1.75rem;
+  .hero-title-main span {
+    display: inline;
   }
 
-  .hero-left {
-    text-align: left;
-    width: 100%;
-    max-width: 420px;
+  .hero-subtitle-main {
+    max-width: 100%;
+    font-size: 0.95rem;
   }
 
-  .hero-title {
-    font-size: 2rem;            /* slightly smaller heading */
-    line-height: 1.15;
-  }
-
-  .hero-subtitle {
-    font-size: 0.98rem;
-  }
-
-  .hero-location {
-    font-size: 0.9rem;
-  }
-
-  .hero-right {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .hero-photo-wrapper {
-    width: 190px;
-    height: 190px;
-    min-width: 190px;
-    min-height: 190px;
-  }
-
-  .hero-photo-wrapper img,
-  .hero-photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 999px;
-    object-fit: cover;
-  }
-
-  /* if you have buttons/badges that might overflow */
-  .hero-actions {
+  /* Buttons row */
+  .hero-buttons {
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  /* Stats under the description & buttons (inside hero-left in JSX) */
+  .hero-stats {
+    margin-top: 0.8rem;
+    gap: 0.7rem;
   }
 }
-
