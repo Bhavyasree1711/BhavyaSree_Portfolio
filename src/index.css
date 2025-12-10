@@ -1071,3 +1071,47 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================= HERO MOBILE FIX ================= */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse; /* image on top, text below */
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-title-main {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .hero-subtitle-main {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-profile-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* IMPORTANT: remove full screen height only for home */
+  #home.page-section {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+}
