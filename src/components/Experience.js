@@ -36,6 +36,20 @@ const Experience = () => {
             <li>Improved debugging and real-world coding skills.</li>
           </ul>
         </div>
+        {/* Infosys Springboard */}
+        <div className="experience-card hover-pop">
+          <h3 className="experience-role">Java Developer Intern</h3>
+          <p className="experience-company">Infosys Springboard Virtual Internship 6.0</p>
+          <span className="experience-duration">Nov 2025 – Feb 2026</span>
+
+          <ul className="experience-points">
+            <li>Selected Java as the core tech stack for the internship program.</li>
+            <li>Built a real-world project called <b>ParkEase – Smart Parking Slot Finder</b>.</li>
+            <li>Designed features for real-time parking slot availability and booking.</li>
+            <li>Applied OOP principles, Java collections, and backend logic to solve practical problems.</li>
+          </ul>
+        </div>
+
         {/* Bharat Intern */}
         <div className="experience-card hover-pop">
           <h3 className="experience-role">Web Developer Intern</h3>
