@@ -3,12 +3,16 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
-    title: "Mind Wellness Tracker",
+    title: "Career Hub",
     desc:
-      "A wellness-focused habit and mood tracking web app where users can set habits, track daily progress, and log mood entries.",
+      "A full-stack career guidance platform with Student, Counsellor, and Admin dashboards. Students upload their resume to receive an ATS score, identify skill gaps, get personalized course recommendations, and receive real-time job notifications.",
+    tech: "React, Node.js, Express, MongoDB",
+  },
+  {
+    title: "Foodie Blog Website",
+    desc:
+      "Created a responsive food blog website with 10+ posts, category-based filtering for easier navigation, and a mobile-compatible interface for better accessibility across devices.",
     tech: "HTML, CSS, JavaScript",
-    github: "https://github.com/Bhavyasree1711/MindWellness_Tracker",
-    live: "https://wellness-tracker-mu.vercel.app/",
   },
   {
     title: "Speech to Text Converter",
